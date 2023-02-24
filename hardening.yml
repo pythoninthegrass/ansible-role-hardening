@@ -21,14 +21,13 @@
       vars:
         auditd_apply_audit_rules: false
         block_blacklisted: true
+        cron: true
         disable_wireless: false
         disable_ipv6: false
         dns: 127.0.0.1 1.1.1.1
         fallback_dns: 9.9.9.9 1.0.0.1
-        disable_ipv6: false
         install_aide: false
         reboot_ubuntu: false
-        block_blacklisted: false
         fs_modules_blocklist:
           - cramfs
           - freevxfs
@@ -105,4 +104,3 @@
           - news
           - sync
           - uucp
-
