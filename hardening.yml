@@ -1,7 +1,6 @@
 ---
 - hosts: localhost
   any_errors_fatal: true
-  hosts: all
   become: true
   vars:
     os_environment:
@@ -15,8 +14,11 @@
 
     - name: Checkout konstruktoid.hardening
       ansible.builtin.git:
-        repo: 'https://github.com/pythoninthegrass/ansible-role-hardening'
-        dest: /etc/ansible/roles/konstruktoid.hardening
+        repo: https://github.com/pythoninthegrass/ansible-role-hardening
+        dest: /home/ubuntu/git/hardening
+        clone: yes
+        update: yes
+        single_branch: yes
         version: master
 
     - name: Include the hardening role
