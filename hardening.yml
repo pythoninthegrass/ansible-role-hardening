@@ -98,7 +98,6 @@
           - ssh-import-id
           - tree
           - vim
-
         ufw_enable: true
         ufw_outgoing_traffic:
           - 22
