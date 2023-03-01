@@ -4,6 +4,8 @@
 
 - name: Configure systemd resolved
   ansible.builtin.include_tasks: resolvedconf.yml
+  # when: resolv_conf
+  when: ansible_os_family == "RedHat"
 
 - name: Install epel-release and python dependencies
   ansible.builtin.include_tasks: pre.yml
