@@ -4,7 +4,7 @@
 - hosts: localhost
   connection: local
   become: true
-  gather_facts: False
+  gather_facts: false
   any_errors_fatal: true
   vars:
     os_environment:
@@ -33,7 +33,7 @@
         state: directory
         owner: "{{ local_user }}"
         group: "{{ local_user }}"
-        mode: 01777
+        # mode: 01777
         recurse: true
 
     - name: Include the hardening role
