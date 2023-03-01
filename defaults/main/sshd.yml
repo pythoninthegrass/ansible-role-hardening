@@ -25,7 +25,7 @@ sshd_macs: hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2
 sshd_max_auth_tries: 3
 sshd_max_sessions: 3
 sshd_max_startups: 10:30:60
-sshd_password_authentication: 'no'
+sshd_password_authentication: 'yes'
 sshd_permit_empty_passwords: 'no'
 sshd_permit_root_login: 'no'
 sshd_permit_user_environment: 'no'
