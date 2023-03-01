@@ -72,6 +72,7 @@
 
 - name: Configure ssh server and client
   ansible.builtin.include_tasks: sshconfig.yml
+  when: ssh_conf
 
 - name: Configure PAM
   ansible.builtin.include_tasks: password.yml
