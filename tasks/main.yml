@@ -7,6 +7,10 @@
   # when: resolv_conf
   when: ansible_os_family == "RedHat"
 
+- name: Configure ssh server and client
+  ansible.builtin.include_tasks: sshconfig.yml
+  when: ssh_conf
+
 - name: Install epel-release and python dependencies
   ansible.builtin.include_tasks: pre.yml
 
@@ -69,10 +73,6 @@
 
 - name: Configure needrestart, install and remove various packages
   ansible.builtin.include_tasks: packages.yml
-
-- name: Configure ssh server and client
-  ansible.builtin.include_tasks: sshconfig.yml
-  when: ssh_conf
 
 - name: Configure PAM
   ansible.builtin.include_tasks: password.yml
