@@ -114,6 +114,10 @@
           - python3
           - python3-pip
           - software-properties-common
+        suid_sgid_permissions: false
+        # TODO: re-enable after debugging `UFW BLOCK` (see: `journalctl -u ufw`)
+        # * https://github.com/konstruktoid/hardening/blob/master/README.adoc#firewall
+        # ! sshd.yml, ufw.yml
         ufw_enable: false
         ufw_outgoing_traffic:
           - 22
