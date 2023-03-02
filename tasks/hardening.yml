@@ -45,7 +45,7 @@
         ssh_conf: false
         # * built-in vars
         auditd_apply_audit_rules: false
-        block_blacklisted: true
+        block_blacklisted: false
         cron: true
         disable_wireless: false
         disable_ipv6: false
@@ -109,17 +109,11 @@
           - bats
           - build-essential
           - ca-certificates
-          - curl
-          - docker-ce
-          - docker-ce-cli
-          - containerd.io
           - gnupg-agent
           - net-tools
           - python3
           - python3-pip
           - software-properties-common
-          - tree
-          - vim
         ufw_enable: false
         ufw_outgoing_traffic:
           - 22
